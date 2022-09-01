@@ -1,6 +1,18 @@
 package com.example.Ejercicio6.entitie;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "laptop")
+@ApiModel(description = "Representa una laptop")
 public class Laptop {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty("Clave ficticia autoincremental tipo Long")
     private Long id;
     private String name;
     private String description;
